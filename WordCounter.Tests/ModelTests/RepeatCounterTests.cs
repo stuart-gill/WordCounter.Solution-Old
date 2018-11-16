@@ -16,7 +16,7 @@ namespace WordCounter.Tests
     [TestMethod]
     public void GetSentence_ReturnsSentence_String()
     {
-      string testSentence = "Snarfle";
+      string testSentence = "Snarfle Darfle";
       RepeatCounter newRepeatCounter = new RepeatCounter(testSentence);
       string result = newRepeatCounter.GetSentence();
       Assert.AreEqual(testSentence, result);
@@ -34,6 +34,16 @@ namespace WordCounter.Tests
     }
 
     [TestMethod]
+    public void IsSentence_ChecksIfIsSentence_Bool()
+    {
+      string testSentence = "sentence contains nonalphabetic characters dd44dd" ;
+      RepeatCounter newRepeatCounter = new RepeatCounter(testSentence);
+      newRepeatCounter.IsSentence(testSentence);
+      bool result = newRepeatCounter.IsSentence(testSentence);
+      Assert.AreEqual(false, result);
+    }
+
+    [TestMethod]
     public void CountWordInSentence_CountsWordsInSentence_Int()
     {
       string testWord = "tarfle";
@@ -43,7 +53,5 @@ namespace WordCounter.Tests
       int result = newRepeatCounter.CountWordInSentence(testWord);
       Assert.AreEqual(2, result);
     }
-
-
   }
 }

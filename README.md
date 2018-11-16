@@ -10,7 +10,7 @@ A program to check how many times a user entered word appears in a user entered 
 3. Program reads the word and assigns it to a variable (string)
 4. Program asks user to enter a sentence: "please enter a sentence"
 5. User enters a sentence. 
-* EXAMPLE INPUT: "my dog likes another dog"
+* EXAMPLE INPUT 2: "my dog likes another dog"
 6. Program reads the sentence and assigns it to a variable (string)
 7. Program splits the sentence variable into a list of strings, one for each word
 8. Program then compares the initial user entered word to each word retrieved from the sentence, one by one
@@ -30,21 +30,22 @@ Click here for a link to the github pages site:
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
+To run tests, navigate to WordCounter.Test in your editor and run the command "dotnet test"
 
-### Break down into end to end tests
+### List of tests
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
+The tests test the ability of the program to:
+1. Create a RepeaterCounter object of the class RepeatCounter
+2. Set the user inputted sentence as a sentence object of the class RepeatCounter
+3. Retrieve the sentence stored in the sentence object of the class RepeatCounter
+4. Count the instances of a user inputted word in the sentence object
+5. Verify that the sentence object is in fact comprised of words. If the sentence object contains anything other than alphabetic characters, the test fails. Numerals and symbols will fail the test. 
 
 ## Built With
 
 * C#
 * .NET
+* MSTest
 
 
 ## Author
