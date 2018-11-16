@@ -1,6 +1,6 @@
 # Word Counter
 
-A program to check how many times a user entered word appears in a user entered sentence.
+A C# program to check how many times a user entered word appears in a user entered sentence.
 
 ## Plain English specifications for program functionality in sequential order
 
@@ -11,22 +11,25 @@ A program to check how many times a user entered word appears in a user entered 
 4. Program asks user to enter a sentence: "please enter a sentence"
 5. User enters a sentence. 
 * EXAMPLE INPUT 2: "my dog likes another dog"
-6. Program reads the sentence and assigns it to a variable (string)
+6. Program reads the sentence and assigns it to another variable (string)
 7. Program splits the sentence variable into a list of strings, one for each word
-8. Program then compares the initial user entered word to each word retrieved from the sentence, one by one
-9. As it compares these words, any time the sentence-retrieved word matches the original word, a counter is incremented by one.
-10. Once all the words in the sentence have been checked, the program tells the user how many times the word appears in the sentence, using the counter. 
+8. Program then splits the sentence words into individual characters and checks each one to make sure it is an alphabetic character.
+9. Program then compares the initial user entered word to each word retrieved from the sentence, one by one
+10. As it compares these words, any time the sentence-retrieved word matches the original word, a counter is incremented by one.
+11. Once all the words in the sentence have been checked, the program tells the user how many times the word appears in the sentence, using the counter. 
 * EXAMPLE OUTPUT: "Your word 'dog' appears 2 times in your sentence"
 
 ### Setup
+
+Follow this link: https://stuart-gill.github.io/word-counter-csharp (currently a dead link, will be updated once front end is built)
+
+OR:
 
 Clone this repository
 
 Open it in the editor of your choice, like VSCode or Atom
 
-Compile the program file and run it
-
-Click here for a link to the github pages site: 
+Compile the program file and run it 
 
 ## Running the tests
 
