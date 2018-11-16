@@ -6,17 +6,17 @@ A program to check how many times a user entered word appears in a user entered 
 
 1. Program asks user to enter a word: "please enter a word"
 2. User enters a word. 
-    EXAMPLE INPUT: "dog"
+* EXAMPLE INPUT: "dog"
 3. Program reads the word and assigns it to a variable (string)
 4. Program asks user to enter a sentence: "please enter a sentence"
 5. User enters a sentence. 
-    EXAMPLE INPUT: "my dog likes another dog"
+* EXAMPLE INPUT: "my dog likes another dog"
 6. Program reads the sentence and assigns it to a variable (string)
 7. Program splits the sentence variable into a list of strings, one for each word
 8. Program then compares the initial user entered word to each word retrieved from the sentence, one by one
 9. As it compares these words, any time the sentence-retrieved word matches the original word, a counter is incremented by one.
 10. Once all the words in the sentence have been checked, the program tells the user how many times the word appears in the sentence, using the counter. 
-    EXAMPLE OUTPUT: "Your word 'dog' appears 2 times in your sentence"
+* EXAMPLE OUTPUT: "Your word 'dog' appears 2 times in your sentence"
 
 ### Setup
 
