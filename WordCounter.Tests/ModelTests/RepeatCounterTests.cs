@@ -10,7 +10,7 @@ namespace WordCounter.Tests
     [TestMethod]
     public void RepeatCounterConstructor_CreatesInstanceofRepeatCounter_RepeatCounter()
     {
-      RepeatCounter newRepeatCounter = new RepeatCounter();
+      RepeatCounter newRepeatCounter = new RepeatCounter("test");
       Assert.AreEqual(typeof(RepeatCounter), newRepeatCounter.GetType());
     }
 
@@ -21,6 +21,17 @@ namespace WordCounter.Tests
       RepeatCounter newRepeatCounter = new RepeatCounter(testWord);
       string result = newRepeatCounter.GetWord();
       Assert.AreEqual(testWord, result);
+    }
+
+    [TestMethod]
+    public void SetWord_SetsWord_String()
+    {
+      string testWord = "Barfle";
+      RepeatCounter newRepeatCounter = new RepeatCounter(testWord);
+      string updatedTestWord = "Snarfle";
+      newRepeatCounter.SetWord(updatedTestWord);
+      string result = newRepeatCounter.GetWord();
+      Assert.AreEqual(updatedTestWord, result);
     }
 
   }
