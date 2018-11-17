@@ -1,5 +1,8 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using WordCounter.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace WordCounter.Tests
 {
@@ -40,6 +43,17 @@ namespace WordCounter.Tests
       RepeatCounter newRepeatCounter = new RepeatCounter(testSentence);
       newRepeatCounter.IsSentence(testSentence);
       bool result = newRepeatCounter.IsSentence(testSentence);
+      Assert.AreEqual(false, result);
+    }
+
+    [TestMethod]
+    public void SentenceToLowerCase_ChecksForLowerCase_Bool()
+    {
+      string testSentence = "This Sentence Has Upper Case Letters";
+      RepeatCounter newRepeatCounter = new RepeatCounter(testSentence);
+      newRepeatCounter.SentenceToLowerCase(testSentence);
+      string resultingSentence = newRepeatCounter.SentenceToLowerCase(testSentence);
+      bool result = resultingSentence.Any(char.IsUpper);
       Assert.AreEqual(false, result);
     }
 

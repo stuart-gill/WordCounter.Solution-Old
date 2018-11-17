@@ -8,7 +8,8 @@ namespace WordCounter.Models
   {
     private string _sentence;
     public List<string> stringList;
-    public int counter;  
+
+    
     
     public RepeatCounter (string sentence)
     {
@@ -27,6 +28,7 @@ namespace WordCounter.Models
 
     public int CountWordInSentence(string targetWord)
     {
+       int counter; 
        counter = 0;      
        stringList = _sentence.Split().ToList();
        foreach(string word in stringList)
@@ -37,6 +39,13 @@ namespace WordCounter.Models
          }
        }
        return counter;
+     }
+
+     public string SentenceToLowerCase(string sentence)
+     {
+       string lowerCaseSentence;
+       lowerCaseSentence = sentence.ToLower();
+       return lowerCaseSentence;
      }
 
      public bool IsSentence(string sentence)
