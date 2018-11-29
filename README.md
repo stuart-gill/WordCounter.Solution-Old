@@ -26,11 +26,15 @@ Follow this link: https://stuart-gill.github.io/word-counter-csharp (currently a
 
 OR:
 
-Clone this repository
+Download .NET Core 2.1.3 SDK and .NET Core Runtime 2.0.9 and install them. Download Mono and install it.
 
-Open it in the editor of your choice, like VSCode or Atom
+Clone this repository: $ git clone repo name
+Change into the work directory:: $ cd WordCounter.Solution
+To edit the project, open the project in your preferred text editor.
 
-Compile the program file and run it 
+To run the program, first navigate to the location of the WordCounter.cs file then compile and execute: $ cd WordCounter/Models $ mcs WordCounter.cs; mono WordCounter.exe;
+
+To run the tests, use these commands: $ cd WordCounter.Tests $ dotnet test 
 
 ## Running the tests
 
